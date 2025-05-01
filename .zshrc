@@ -50,3 +50,7 @@ if [ -f "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.
 else
     echo "zsh-syntax-highlighting not found. Please ensure it is installed via Homebrew."
 fi
+
+# Add Starship prompt initialization
+eval "$(starship init zsh)"
+export STARSHIP_CONFIG=~/.config/starship/starship.toml

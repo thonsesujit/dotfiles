@@ -60,6 +60,7 @@ packages=(
     "zsh-autosuggestions" # Zsh plugin for command auto-suggestions
     "zsh-syntax-highlighting" # Zsh plugin for syntax highlighting
     "z"          # Zsh plugin for directory jumping
+    "starship"     # Cross-shell prompt
 )
 
 # Loop over the array to install each application.
