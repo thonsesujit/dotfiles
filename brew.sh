@@ -61,6 +61,7 @@ packages=(
     "zsh-syntax-highlighting" # Zsh plugin for syntax highlighting
     "z"          # Zsh plugin for directory jumping
     "starship"     # Cross-shell prompt
+    "fzf"         # Command-line fuzzy finder
 )
 
 # Loop over the array to install each application.

@@ -58,3 +58,12 @@ if command -v starship &>/dev/null; then
 else
     echo "Starship prompt not found. Please ensure it is installed."
 fi
+
+# Enable fzf key bindings and auto-completion
+if [ -f "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh" ]; then
+    source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
+fi
+
+if [ -f "$(brew --prefix)/opt/fzf/shell/completion.zsh" ]; then
+    source "$(brew --prefix)/opt/fzf/shell/completion.zsh"
+fi
