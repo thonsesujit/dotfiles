@@ -7,25 +7,20 @@ fi
 
 # Install VS Code Extensions
 extensions=(
-    batisteo.vscode-django
-    charliermarsh.ruff
-    esbenp.prettier-vscode
-    formulahendry.code-runner
-    foxundermoon.shell-format
-    github.copilot
-    github.copilot-chat
-    mechatroner.rainbow-csv
-    monosans.djlint
-    ms-python.mypy-type-checker
-    ms-python.python
-    ms-toolsai.jupyter
-    ms-vscode.theme-predawnkit
-    mtxr.sqltools
-    mtxr.sqltools-driver-sqlite
-    ritwickdey.liveServer
-    tamasfe.even-better-toml
-    teabyii.ayu
-    tomoki1207.pdf
+    esbenp.prettier-vscode            # Prettier code formatter for consistent code styling
+    formulahendry.code-runner         # Run code snippets or files directly in VS Code
+    foxundermoon.shell-format         # Format shell scripts (Bash, Zsh, etc.)
+    github.copilot                    # GitHub Copilot for AI-powered code suggestions
+    github.copilot-chat               # Chat-based interface for GitHub Copilot
+    mechatroner.rainbow-csv           # Highlight CSV files and provide tools for working with them
+    teabyii.ayu                       # Ayu theme for VS Code
+    tomoki1207.pdf                    # PDF viewer for VS Code
+    ms-azuretools.vscode-docker       # Docker support for VS Code  
+    ms-vscode-remote.remote-containers # Remote development with Docker containers
+    dbaeumer.vscode-eslint           # ESLint integration for JavaScript and TypeScript
+    github.vscode-pull-request-github   # GitHub Pull Request integration for VS Code
+    oderwat.indent-rainbow           # Rainbow indentation for better readability
+    sapse.sap-ux-fiori-tools-extension-pack # SAP Fiori tools for development
 )
 
 # Get a list of all currently installed extensions.
@@ -49,7 +44,7 @@ VSCODE_USER_SETTINGS_DIR="${HOME}/Library/Application Support/Code/User"
 if [ -d "$VSCODE_USER_SETTINGS_DIR" ]; then
     # Copy your custom settings.json and keybindings.json to the VS Code settings directory
     ln -sf "${HOME}/dotfiles/settings/VSCode-Settings.json" "${VSCODE_USER_SETTINGS_DIR}/settings.json"
-    ln -sf "${HOME}/dotfiles/settings/VSCode-Keybindings.json" "${VSCODE_USER_SETTINGS_DIR}/keybindings.json"
+    # ln -sf "${HOME}/dotfiles/settings/VSCode-Keybindings.json" "${VSCODE_USER_SETTINGS_DIR}/keybindings.json"
 
     echo "VS Code settings and keybindings have been updated."
 else
@@ -57,7 +52,7 @@ else
 fi
 
 # Open VS Code to sign-in to extensions
-code .
-echo "Login to extensions (Copilot, Grammarly, etc) within VS Code."
-echo "Press enter to continue..."
-read
+# code .
+# echo "Login to extensions (Copilot, Grammarly, etc) within VS Code."
+# echo "Press enter to continue..."
+# read

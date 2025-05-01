@@ -42,16 +42,22 @@ brew cleanup
 
 # Define an array of packages to install using Homebrew.
 packages=(
-    "python"
-    "tcl-tk"
-    "python-tk"
-    "bash"
-    "zsh"
-    "git"
-    "tree"
-    "node"
-    "uv"
-    "pipx"
+    "python"       # Python programming language
+    # "tcl-tk"     # Tcl/Tk libraries for GUI development (commented out)
+    "python-tk"    # Python bindings for Tcl/Tk (used for tkinter GUI)
+    "bash"         # Bourne Again Shell (alternative shell)
+    "zsh"          # Z shell (default shell on macOS)
+    "git"          # Version control system
+    "tree"         # Command-line tool to display directory structure
+    "node"         # JavaScript runtime for server-side development
+    "uv"           # libuv library for asynchronous I/O
+    "pipx"         # Tool to install and run Python applications in isolated environments
+    "nvm"          # Node Version Manager (manage multiple Node.js versions)
+    "openjdk"      # Java Development Kit (JDK)
+    "jenv"         # Java Version Manager (manage multiple Java versions)
+    "docker"      # Containerization platform
+    "docker-compose" # Tool for defining and running multi-container Docker applications
+
 )
 
 # Loop over the array to install each application.
@@ -106,17 +112,8 @@ fi
 # Github uses "main" as the default branch name
 $(brew --prefix)/bin/git config --global init.defaultBranch main
 
-# Create the tutorial virtual environment I use frequently
-$(brew --prefix)/bin/python3 -m venv "${HOME}/tutorial"
-
 # Install Prettier, which I use in both VSCode and Sublime Text
 $(brew --prefix)/bin/npm install --global prettier
-
-# Install DJLint, which I use in VSCode for Django and Jinja2 Template Formatting
-$(brew --prefix)/bin/pipx install djlint
-
-# Install Ruff, which I use in VSCode for Python Formatting and Linting
-$(brew --prefix)/bin/pipx install ruff
 
 # Define an array of applications to install using Homebrew Cask.
 apps=(
@@ -126,14 +123,10 @@ apps=(
     "sublime-text"
     "visual-studio-code"
     "git-credential-manager"
-    "spotify"
-    "discord"
-    "google-drive"
-    "gimp"
-    "vlc"
-    "rectangle"
-    "postman"
-    "keyboardcleantool"
+    "rectangle" # Window management tool
+    "bruno"
+    "openlens" # Kubernetes IDE
+    "ngrok" # Secure tunnel to localhost
 )
 
 # Loop over the array to install each application.
@@ -191,12 +184,6 @@ echo "Sign in to Google Chrome. Press enter to continue..."
 read
 
 echo "Connect Google Account (System Settings -> Internet Accounts). Press enter to continue..."
-read
-
-echo "Sign in to Spotify. Press enter to continue..."
-read
-
-echo "Sign in to Discord. Press enter to continue..."
 read
 
 echo "Open Rectangle and give it necessary permissions. Press enter to continue..."

@@ -1,18 +1,27 @@
 #!/usr/bin/env zsh
 
-xcode-select --install
+# Check if Xcode Command Line Tools are installed
+if ! xcode-select -p &>/dev/null; then
+    echo "Xcode Command Line Tools not found. Installing..."
+    xcode-select --install
+    echo "Complete the installation of Xcode Command Line Tools before proceeding."
+    echo "Press enter to continue..."
+    read
+else
+    echo "Xcode Command Line Tools are already installed. Skipping installation."
+fi
 
 echo "Complete the installation of Xcode Command Line Tools before proceeding."
 echo "Press enter to continue..."
 read
 
-# Set scroll as traditional instead of natural
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
-killall Finder
+# Set scroll as traditional instead of natural. Uncomment the line below to enable.
+# defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+# killall Finder
 
 # Set location for screenshots
-mkdir "${HOME}/Desktop/Screenshots"
-defaults write com.apple.screencapture location "${HOME}/Desktop/Screenshots"
+mkdir "${HOME}/Documents/Screenshots"
+defaults write com.apple.screencapture location "${HOME}/Documents/Screenshots"
 killall SystemUIServer
 
 # Add Bluetooth to Menu Bar for battery percentages

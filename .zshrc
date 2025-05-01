@@ -26,4 +26,4 @@ done
 unset file
 
 # Created by pipx
-export PATH="$PATH:/Users/coreyschafer/.local/bin"
+export PATH="$PATH:/Users/I540546/.local/bin"
