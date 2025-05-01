@@ -57,7 +57,9 @@ packages=(
     "jenv"         # Java Version Manager (manage multiple Java versions)
     "docker"      # Containerization platform
     "docker-compose" # Tool for defining and running multi-container Docker applications
-
+    "zsh-autosuggestions" # Zsh plugin for command auto-suggestions
+    "zsh-syntax-highlighting" # Zsh plugin for syntax highlighting
+    "z"          # Zsh plugin for directory jumping
 )
 
 # Loop over the array to install each application.

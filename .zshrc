@@ -27,3 +27,26 @@ unset file
 
 # Created by pipx
 export PATH="$PATH:/Users/I540546/.local/bin"
+
+# Z package configuration
+if [ -f "/opt/homebrew/etc/profile.d/z.sh" ]; then
+    . /opt/homebrew/etc/profile.d/z.sh
+    export _Z_NO_PROMPT_COMMAND=1  # Disable prompt command for better performance
+    export _Z_DATA=~/.z  # Specify the data file for z
+else
+    echo "z not found. Please ensure it is installed via Homebrew."
+fi
+
+# Enable zsh-autosuggestions
+if [ -f "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
+    source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+else
+    echo "zsh-autosuggestions not found. Please ensure it is installed via Homebrew."
+fi
+
+# Enable zsh-syntax-highlighting
+if [ -f "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+    source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+else
+    echo "zsh-syntax-highlighting not found. Please ensure it is installed via Homebrew."
+fi
