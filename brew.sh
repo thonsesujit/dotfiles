@@ -62,6 +62,7 @@ packages=(
     "z"          # Zsh plugin for directory jumping
     "starship"     # Cross-shell prompt
     "fzf"         # Command-line fuzzy finder
+    "yarn"        # Package manager for JavaScript
 )
 
 # Loop over the array to install each application.
