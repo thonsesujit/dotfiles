@@ -52,7 +52,6 @@ packages=(
     "node"         # JavaScript runtime for server-side development
     "uv"           # libuv library for asynchronous I/O
     "pipx"         # Tool to install and run Python applications in isolated environments
-    "nvm"          # Node Version Manager (manage multiple Node.js versions)
     "openjdk"      # Java Development Kit (JDK)
     "jenv"         # Java Version Manager (manage multiple Java versions)
     "docker"      # Containerization platform
@@ -63,6 +62,9 @@ packages=(
     "starship"     # Cross-shell prompt
     "fzf"         # Command-line fuzzy finder
     "yarn"        # Package manager for JavaScript
+    "maven"       # Build automation tool for Java projects
+    "zinit"      # Zsh plugin manager , need to configure in zshrc
+    "fnm"         # Fast Node Manager
 )
 
 # Loop over the array to install each application.
